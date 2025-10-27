@@ -10,6 +10,7 @@ body {
   justify-content: center;
   background-color: #131313;
   color: #cacaca;
+  padding: 10px;
 }
 
 strong{
@@ -22,6 +23,7 @@ main {
   justify-content: center;
   align-items: center;
   max-width: 1240px;
+  width: 100%;
 }
 
 .numero {
@@ -38,12 +40,13 @@ header {
   align-items: center;
   text-align: center;
   gap: 15px;
+  width: 100%;
 }
 
 .containerReferencia{
     padding: 5px;
     background-color: #bb1212;
-    width: fit-content
+    width: fit-content;
 }
 
 header #referencia{
@@ -55,6 +58,7 @@ header #referencia{
 #evangelho{
     padding: 15px;
     text-align: justify;
+    line-height: 1.6;
 }
 
 .container-main{
@@ -64,7 +68,56 @@ header #referencia{
   background-color: rgb(32, 32, 32);
   border-radius: 10px;
   border: 1px solid #313131;
-  width: 60vh;
-  padding: 10px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
   gap: 10px;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .container-main {
+    max-width: 95%;
+    padding: 15px;
+  }
+  
+  header {
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  #evangelho {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+  
+  .container-main {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  header {
+    padding: 10px;
+  }
+  
+  header #title {
+    font-size: 18px;
+  }
+  
+  #evangelho {
+    font-size: 13px;
+    padding: 8px;
+  }
+  
+  .numero {
+    font-size: 8px;
+  }
 }
