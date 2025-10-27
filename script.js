@@ -1,11 +1,12 @@
 const URL = "/api/liturgia";
+//const URL = "http://liturgia.up.railway.app/v2/"
 console.log(URL);
 
 async function liturgiaDiariaApi() {
   try {
     const resposta = await fetch(URL);
     if(resposta.status === 200){
-      
+
       const obj = await resposta.json();
       document.getElementById('referencia').textContent = obj.leituras.evangelho[0].referencia;
       document.getElementById('title').textContent = obj.leituras.evangelho[0].titulo;

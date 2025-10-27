@@ -8,13 +8,13 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: #131313;
-  color: #cacaca;
+  background-color: #fffae3d2;
+  color: #1b1b1b;
   padding: 10px;
 }
 
 strong{
-  color: white;
+  color: rgb(48, 47, 47);
 }
 
 main {
@@ -58,26 +58,63 @@ header #referencia{
 #evangelho{
     padding: 15px;
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .container-main{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(32, 32, 32);
+  background-color: antiquewhite;
   border-radius: 10px;
-  border: 1px solid #313131;
+  border: 1px solid #e9e9e9e5;
   width: 100%;
   max-width: 800px;
   padding: 20px;
   gap: 10px;
 }
 
+.nav-menu{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 30px;
+  width: 100%;
+}
 
+.menu-itens{
+  display: flex;
+  padding: 20px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-itens a, li{
+  color: #131313;
+  text-decoration: none;
+  list-style: none;
+}
+
+#card{
+  padding: 10px 30px;
+  border: 1px solid #c2c2c26b;
+  transition: ease 0.3s;
+  white-space: nowrap;
+}
+
+#card:hover{
+  background-color: #bb1212;
+  color: #ffffff;
+  border: 1px solid #ad0303;
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .container-main {
     padding: 15px;
+    max-width: 95%;
   }
   
   header {
@@ -86,12 +123,23 @@ header #referencia{
   }
   
   #evangelho {
-    padding: 10px;
+    padding: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .menu-itens {
+    padding: 15px;
+    gap: 8px;
+  }
+
+  #card {
+    padding: 8px 20px;
     font-size: 14px;
   }
 }
 
-
+/* Celulares */
 @media (max-width: 480px) {
   body {
     padding: 5px;
@@ -100,23 +148,59 @@ header #referencia{
   .container-main {
     max-width: 100%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
   }
   
   header {
     padding: 10px;
+    gap: 8px;
   }
   
   header #title {
     font-size: 18px;
+    line-height: 1.3;
   }
   
   #evangelho {
-    font-size: 13px;
-    padding: 8px;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.6;
   }
   
   .numero {
-    font-size: 8px;
+    font-size: 9px;
+  }
+
+  .nav-menu {
+    padding: 10px 0px 20px;
+  }
+
+  .menu-itens {
+    padding: 10px;
+    gap: 5px;
+    width: 100%;
+  }
+
+  #card {
+    padding: 8px 15px;
+    font-size: 13px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 360px) {
+  header #title {
+    font-size: 16px;
+  }
+
+  #evangelho {
+    font-size: 13px;
+  }
+
+  #card {
+    padding: 6px 10px;
+    font-size: 12px;
   }
 }
