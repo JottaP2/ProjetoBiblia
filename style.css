@@ -74,10 +74,9 @@ header #referencia{
   gap: 10px;
 }
 
-/* Responsividade para tablets */
+
 @media (max-width: 768px) {
   .container-main {
-    max-width: 95%;
     padding: 15px;
   }
   
@@ -92,7 +91,7 @@ header #referencia{
   }
 }
 
-/* Responsividade para celulares */
+
 @media (max-width: 480px) {
   body {
     padding: 5px;
