@@ -1,4 +1,4 @@
-const URL = "http://liturgia.up.railway.app/v2/";
+const URL = "/api/liturgia";
 console.log(URL);
 
 async function liturgiaDiariaApi() {
@@ -15,7 +15,6 @@ async function liturgiaDiariaApi() {
       textoEvangelho = textoEvangelho.replace(/(\d+)/g, '<span class="numero">$1 </span>');
       
       document.getElementById('evangelho').innerHTML = textoEvangelho;
-      document.getElementById('')
       
     } else {
       console.error('Erro na requisição:', resposta.status);
