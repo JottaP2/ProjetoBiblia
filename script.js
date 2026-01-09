@@ -1,4 +1,5 @@
 const URL = "/api/liturgia";
+
 console.log(URL);
 
 async function getLiturgia() {
@@ -37,14 +38,21 @@ async function loadData() {
   btnPrimeiraLeitura.addEventListener('click', () => {
     referencia.innerHTML = getInfo.leituras.primeiraLeitura[0].referencia
     title.innerHTML = getInfo.leituras.primeiraLeitura[0].titulo
-    contentText.innerHTML = getInfo.leituras.primeiraLeitura[0].texto
-    primeiraLeitura.replace(/(\d+)/g, '<span class="numero">$1 </span>')
+    
+    let texto = getInfo.leituras.primeiraLeitura[0].texto
+    texto = texto.replace(/(\d+)/g, '<span class="numero">$1 </span>')
+    contentText.innerHTML = texto
   })
 
   btnEvangelho.addEventListener('click', () => {
     referencia.innerHTML = getInfo.leituras.evangelho[0].referencia
     title.innerHTML = getInfo.leituras.evangelho[0].titulo
     contentText.innerHTML = getInfo.leituras.evangelho[0].texto
+
+    let texto = getInfo.leituras.evangelho[0].texto
+    texto = texto.replace(/(\d+)/g, '<span class="numero">$1 </span>')
+    contentText.innerHTML = texto
+
   })
 
   btnPrimeiraLeitura.click()
